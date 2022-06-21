@@ -64,10 +64,11 @@ body {
 }
 
 .section {
-  margin-bottom: 94px;
+ padding-top: 94px;
+ padding-bottom: 94px;
 }
 
-.img {
+img {
   display: block;
 }
 
@@ -101,7 +102,7 @@ button:focus .servbut:hover {
 
 /* Logo */
 
-.logo {
+.logo, .logofooter {
   margin-right: 93px;
   font-family: Raleway;
   font-weight: 700;
@@ -118,9 +119,7 @@ button:focus .servbut:hover {
 /* site nav */
 
 .header {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  border-bottom: 1px solid #ECECEC;
+    border-bottom: 1px solid #ECECEC;
 }
 
 .nav-container {
@@ -149,7 +148,11 @@ button:focus .servbut:hover {
 }
 
 .nav-item {
+  display: block;
   margin-right: 50px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  
 }
 
 .nav-item:nth-last-child(1) {
@@ -185,9 +188,13 @@ button:focus .servbut:hover {
 }
 
 .contact-nav-list .link {
-  margin-left: 50px;
-  text-decoration: none;
+    text-decoration: none;
 }
+
+.contacnt-nav-link {
+  margin-left: 50px;
+}
+
 
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -202,8 +209,7 @@ button:focus .servbut:hover {
 /* Герой */
 .hero {
  
-  margin-bottom: 94px;
-  padding-top: 200px;
+   padding-top: 200px;
   padding-bottom: 280px;
   background-color: var(--background-box);
 }
@@ -276,31 +282,38 @@ h3 {
 
 .features-item {
   margin-right: 30px;
+  width: 270px;
  
 }
 
 .features-item:nth-last-child(1) {
   margin-right: 0;
+  width: 270px;
 }
 
 /* Чем мы занимаемся */
 
 .we-do-list {
 display: flex;
-margin-bottom: 94px;
 }
 
 .we-do-item {
   margin-right: 30px;
 }
 
+.we-do-item:nth-last-child(1) {
+  margin-right: 0;
+}
+
+.section-we-do {
+  padding-bottom: 94px;
+}
+
 
 
 /* Наша команда */
 
-.our-team-title {
-padding-top: 94px;
-}
+
 
 .our-team-item {
   display: flex;
@@ -309,8 +322,7 @@ padding-top: 94px;
 .team-item {
   margin-right: 30px;
   background-color: white;
-  padding-bottom: 30px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 border-radius: 0px 0px 4px 4px;
 }
 
@@ -330,13 +342,21 @@ border-radius: 0px 0px 4px 4px;
   text-align: center;
 }
 
+.team-cover {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  
+}
+
 .team-name {
-  margin-top: 30px;
-  text-align: center;
+    text-align: center;
 }
 
 .team {
   padding-bottom: 94px;
+  padding-top: 94px;
   margin-bottom: 0;
 }
 
@@ -344,14 +364,21 @@ border-radius: 0px 0px 4px 4px;
 
 /* Footer */
 
-footer {
-  background-color: var(--background-box);
-}
+.logofooter .web {
+  color: #1f89df;
+  }
+  
+  footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--background-box);
+  }
+  
+  .studio {
+    color: var(--white-color);
+  }
 
 
-.studio {
-  color: var(--white-color);
-}
 address {
   
   font-size: 14px;
@@ -359,8 +386,7 @@ address {
   color: var(--white-color);
   font-family: Roboto, sans-serif;
   font-style: normal;
-  padding-top: 60px;
-  padding-bottom: 60px;
+ 
   }
 
   .adress-text {
@@ -368,10 +394,7 @@ address {
     margin-bottom: 9px;
   }
 
-address:hover,
-address:focus {
-  color: var(--accent-color);
-}
+
 
 .adress-contact a {
   color: rgba(255, 255, 255, 0.6);
@@ -404,7 +427,7 @@ address:focus {
 
   .filter {
     padding-top: 94px;
-    padding-bottom: 50px;
+   margin-bottom: 50px;
   }
 
   .portfolio-list a {
@@ -428,6 +451,7 @@ address:focus {
     margin-top: -30px;
     margin-left: -30px;
     margin-bottom: 94px;
+   
   }
 
 .portfolio-name {
@@ -435,8 +459,9 @@ address:focus {
   font-size: 18px;
   line-height: 2;
   color: var(--primary-text-color);
-  margin-left: 24px;
-  margin-top: 20px;
+  margin-bottom: 4px;
+  
+  
 }
 
 .portfolio-text {
@@ -444,13 +469,18 @@ address:focus {
   font-size: 16px;
   line-height: 1.87;
   color: var(--title-text-color);
-  margin-left: 24px;
-  margin-bottom: 20px;
+  
 }
 
 .portfolio-div {
   border: 1px solid #EEEEEE;
   margin-top: 0;
+  border-top: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+  
 }
 
 .button-portofolio {
@@ -464,7 +494,7 @@ address:focus {
 left: 712px;
 top: 174px;
 padding: 6px 22px;
-margin-right: 8px;
+
 
 background: #F5F4FA;
 border-radius: 4px;
@@ -475,3 +505,13 @@ border-radius: 4px;
   background-color: var(--accent-color);
   color: var(--white-color)
 }
+
+
+.button-list {
+  margin-right: 8px;
+}
+
+.button-list:nth-last-child(1) {
+  margin-right: 0;
+}
+
